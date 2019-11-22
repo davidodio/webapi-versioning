@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Tapend.VersioningExample.V1
+namespace TapEnd.VersioningExample.V1
 {
     [ApiController]
     [Route("[controller]")]
@@ -12,7 +12,7 @@ namespace Tapend.VersioningExample.V1
     }
 }
 
-namespace Tapend.VersioningExample.V2
+namespace TapEnd.VersioningExample.V2
 {
     [ApiController]
     [Route("[controller]")]
