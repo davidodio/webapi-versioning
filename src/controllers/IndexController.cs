@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TapEnd.VersioningExample.V1
 {
@@ -8,6 +9,7 @@ namespace TapEnd.VersioningExample.V1
     {
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public string Get() => "Version 1";
     }
 }
@@ -20,6 +22,7 @@ namespace TapEnd.VersioningExample.V2
     {
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public string Get() => "Version 2";
     }
 }
