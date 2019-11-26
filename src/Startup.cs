@@ -25,7 +25,10 @@ namespace TapEnd.VersioningExample
             services.AddApiVersioning(opts => {
                 opts.ReportApiVersions = true;
                 opts.Conventions.Add(new VersionByNamespaceConvention());
-                opts.ApiVersionReader = new MediaTypeApiVersionReader();
+                opts.ApiVersionReader = ApiVersionReader.Combine(
+                    new MediaTypeApiVersionReader(),
+                    new QueryStringApiVersionReader()
+                ); 
             
                 opts.AssumeDefaultVersionWhenUnspecified = true;
                 opts.DefaultApiVersion = new ApiVersion(1, 0);
